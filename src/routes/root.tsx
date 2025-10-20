@@ -3,6 +3,7 @@ import { Footer } from "../components/footer";
 import { SignInButton } from "../components/sign-in-button";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AuthKitProvider } from "@workos-inc/authkit-react";
+import { SecurityWidget } from "../components/SecurityWidget";
 
 export default function Layout() {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function Layout() {
         panelBackground="solid"
         style={{ backgroundColor: "var(--gray-1)" }}
       >
+       <SecurityWidget/>
         <Container style={{ backgroundColor: "var(--gray-1)" }}>
           <Flex direction="column" gap="5" p="5" height="100vh">
             <Box asChild flexGrow="1">
